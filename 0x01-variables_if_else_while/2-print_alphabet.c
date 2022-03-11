@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * Main - entry point
- * Description: Display alphabet
+ * main - entry point
+ * Description: print alphabets
  * Return: 0
  */
 int main(void)
 {
-/* document of btye */
 	char c = 'a';
 
 	while (c <= 'z')
 	{
-
 		putchar(c);
 		c++;
 	}
