@@ -7,6 +7,7 @@
  */
 int main(void)
 {
+/* document of btye */
 	char c = 'a';
 
 	while (c <= 'z')
