@@ -1,20 +1,11 @@
-#include "stdio.h"
+#include "holberton.h"
+
 /**
-*print_alphabet_x10 - print 10 times the alphabet, in lowercase.
-*
-*Return: Always 0.
-*/
-void print_alphabet_x10(void)
+ * _islower - checks for lowercase character
+ * @c: the character to check
+ * Return: 1 if c is lowercase, 0 otherwise
+ */
+int _islower(int c)
 {
-	int j, i;
-
-	for (j = 1; j <= 10; j++)
-	{
-		for (i = 'a'; i <= 'z'; i++)
-		{
-			_putchar(i);
-		}
-		_putchar('\n');
-	}
+	return (c >= 'a' && c <= 'z');
 }
-
