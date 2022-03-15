@@ -1,10 +1,18 @@
-#include <stdio>
-/* betty style
- *
- *
+#include <stdio.h>
+/* 
+ * main - Entry point
+ *write program print char in new line
+ *Return: Always (Success)
  */
 int main(void)
 {
-	put("_putchar");
-	return 0;
+	char *ch = "_putchar";
+
+	while (*ch)
+	{
+		_putchar(*ch);
+		ch++;
+	}
+	_putchar('\n');
+return (0);
 }
