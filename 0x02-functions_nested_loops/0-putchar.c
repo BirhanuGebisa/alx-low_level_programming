@@ -1,19 +1,18 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * main - Entry block
- * Description: prints holberton on new line
+ * main - entry block
+ * @void: no argument
  * Return: 0
- */
+ **/
 int main(void)
 {
-	char c[10] = "Holberton";
+	char ermias[] = "_putchar";
 
-	int i = 0;
+	int c;
 
-	while (i < 9)
+	for (c = 0; c < 8; c++)
 	{
-		_putchar(c[i]);
-		i++;
+		_putchar(ermias[c]);
 	}
 	_putchar('\n');
 	return (0);
