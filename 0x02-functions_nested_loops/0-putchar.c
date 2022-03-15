@@ -1,18 +1,20 @@
-#include <stdio.h>
-/* 
- * main - Entry point
- *write program print char in new line
- *Return: Always (Success)
+#include "holberton.h"
+/**
+ * main - Entry block
+ * Description: prints holberton on new line
+ * Return: 0
  */
 int main(void)
 {
-	char *ch = "_putchar";
+	char c[10] = "Holberton";
 
-	while (*ch)
+	int i = 0;
+
+	while (i < 9)
 	{
-		_putchar(*ch);
-		ch++;
+		_putchar(c[i]);
+		i++;
 	}
 	_putchar('\n');
-return (0);
+	return (0);
 }
