@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * swap_int - swap the values
- * Pointers
- * Return: Nothing
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 void swap_int( int *a, int *b)
 {
