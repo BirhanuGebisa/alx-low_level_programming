@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * main - check the code
- *
- * Return: Always 0.
- */
+* swap_int - swaps the values
+*@a: pointer to a
+*@b: ponter to b
+*Return: Nothing
+*/ 
 void swap_int( int *a, int *b)
 {
 	int aux;
