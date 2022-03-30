@@ -1,50 +1,52 @@
 #include "main.h"
 
 /**
+ * last_index - returns the last index of a string (counts the null char)
+ * @s: pointer the string
+ * Return: int
+ */
+int is_palindrome(char *s);
+int check(char *s, int start, int end, int pair);
+int last_index(char *s)
+{
+int n = 0;
+
+if (*s > '\0')
+	n += last_index(s + 1) + 1;
+
+return (n);
+}
+
+/**
  * is_palindrome - check if a string is a palindrome
- * @s: char array string
- * Return: 1 if palindrome, 0 if not
+ * @s: string to check
+ * Return: 0 or 1
  */
 
 int is_palindrome(char *s)
 {
-	int length;
+int end = last_index(s);
 
-	length = get_length(s) - 1;
-
-	return (my_pal(s, --length));
+return (check(s, 0, end - 1, end % 2));
 }
 
 /**
- * get_length - gets length of string
+ * check - checker for the palindrome
  * @s: string
- * Return: return length of string
+ * @start: int moves from right to left
+ * @end: int moves from left to right
+ * @pair: int
+ * Return: 0 or 1
  */
 
-int get_length(char *s)
-{
-	if (*s == '\0')
-		return (1);
-	else
-		return (1 + get_length(++s));
-}
 
-/**
- * my_pal - recursive check of palindrome
- * @s: string
- * @l: length of string
- * Return: 1 if palindrome, 0 if not
- */
-
-int my_pal(char *s, int l)
+int check(char *s, int start, int end, int pair)
 {
-	if (*s == *(s + l))
-	{
-		if (l <= 0)
-			return (1);
-		else
-			return (my_pal(++s, l - 2));
-	}
-	else
-		return (0);
+
+if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
+	return (1);
+else if (s[start] != s[end])
+	return (0);
+else
+	return (check(s, start + 1, end - 1, pair));
 }
