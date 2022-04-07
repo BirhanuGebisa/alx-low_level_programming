@@ -40,4 +40,3 @@ _memset(m, 0, nmemb * sizeof(int));
 
 return (m);
 }
-
